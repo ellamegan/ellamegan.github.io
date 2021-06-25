@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+	  <link rel="stylesheet" type="text/css" href="cinema4d.css" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  
+  </head>
+  <body>
+	  
+	  <body onLoad="show_clock()">
+		  <!---
+		  	  <div style="object-fit: cover; width: 100vh; height: auto; position: fixed; top: 0; left: 0;"> <img src="GraphicClear.gif"> </div>
+
+--->
+	  
+	  	<p>
+			
+		  <a href="clouds.html">Page 1,</a>
+		  
+		  <a href="gallery.html">Page 2,</a>
+		  
+		  <a href="cinema4d.html">Page 3,</a>
+			
+			<a href="cinema4d_2.html">Page 4.</a>
+		  
+		</p>
+ 
+
+    <div id="set-height"></div>
+
+    <video id="v0" tabindex="0", autobuffer preload>
+        <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="logo_move2.mp4"></source>
+    </video>
+	
+	
+    <script src="sticky.js"></script>
+    <script>
+
+        enterView({
+            selector: 'section',
+            enter: function(el) {
+                el.classList.add('entered');
+            }
+        })
+    
+        var frameNumber = 0, // start video at frame 0
+        // lower numbers = faster playback
+        playbackConst = 1000, 
+        // get page height from video duration
+        setHeight = document.getElementById("set-height"), 
+        // select video element         
+        vid = document.getElementById('v0'); 
+        // var vid = $('#v0')[0]; // jquery option
+
+    // dynamically set the page height according to video length
+    vid.addEventListener('loadedmetadata', function() {
+    setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+    });
+
+
+    // Use requestAnimationFrame for smooth playback
+    function scrollPlay(){  
+    var frameNumber  = window.pageYOffset/playbackConst;
+    vid.currentTime  = frameNumber;
+    window.requestAnimationFrame(scrollPlay);
+    }
+
+    window.requestAnimationFrame(scrollPlay);
+    
+    </script>
+	  
+	</body>
+	
+	
+		  
+		  <div class="time"><script language="javascript" src="liveclock.js"></script></div>
+</html>

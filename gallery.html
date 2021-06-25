@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+	  <link rel="stylesheet" type="text/css" href="clouds.css" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <style type="text/css">
+
+.thumbnail{
+position: relative;
+z-index: 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+z-index: 50;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+	height: 500px;
+	width: auto;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/
+visibility: visible;
+bottom: -100px;
+left: -500px; /*position where enlarged image should offset horizontally */
+
+}
+
+</style>
+
+  </head>
+  <body>
+	  
+	  <body onLoad="show_clock()">
+		  <!---
+		  	  <div style="object-fit: cover; width: 100vh; height: auto; position: fixed; top: 0; left: 0;"> <img src="GraphicClear.gif"> </div>
+
+--->
+	  
+	  	<p>
+			
+		  		  <a href="clouds.html">Page 1,</a>
+		  
+		  <a href="gallery.html">Page 2,</a>
+		  
+		  <a href="cinema4d.html">Page 3,</a>
+			
+			 <a href="cinema4d_2.html">Page 4.</a>
+		  
+		</p>
+
+
+<div class="gallery">
+
+	<a class="thumbnail" href="#thumb"><img src="tokyo1-min.jpg"><span><img src="tokyo1-min.jpg" /><br /></span></a>
+    
+	<div class="desc">5</div>
+
+</div>
+		  
+		  <div class="gallery">
+
+	<a class="thumbnail" href="#thumb"><img src="tokyo4-min.jpg"><span><img src="tokyo4-min.jpg" /><br /></span></a>
+    
+	<div class="desc">4</div>
+
+</div>
+		  		  <div class="gallery">
+
+	<a class="thumbnail" href="#thumb"><img src="tokyo5-min.jpg"><span><img src="tokyo5-min.jpg" /><br /></span></a>
+    
+	<div class="desc">3</div>
+
+</div>
+		  
+		  		  <div class="gallery">
+
+	<a class="thumbnail" href="#thumb"><img src="tokyo6-min.jpg"><span><img src="tokyo6-min.jpg" /><br /></span></a>
+    
+	<div class="desc">2</div>
+
+</div>
+		  
+		  		  <div class="gallery">
+
+	<a class="thumbnail" href="#thumb"><img src="tokyo7-min.jpg"><span><img src="tokyo7-min.jpg" /><br /></span></a>
+    
+	<div class="desc">1</div>
+
+</div>
+
+		  
+		  <div class="time"><script language="javascript" src="liveclock.js"></script></div>
+		  
+	  </body>
+	  
+	</body>
+	
+</html>
+
+
